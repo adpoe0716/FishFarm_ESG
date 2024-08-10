@@ -1,0 +1,17 @@
+.weather-icon {
+    font-size: 48px;
+    color: #1890ff;
+  }
+  
+  .forecast-card {
+    text-align: center;
+  }
+  
+  .forecast-card h3 {
+    margin-bottom: 0;
+  }
+  
+  .forecast-card p {
+    margin: 0;
+  }
+  

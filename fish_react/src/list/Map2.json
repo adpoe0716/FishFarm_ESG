@@ -1,0 +1,28 @@
+[
+    {
+        "id": 3,
+        "name": "鹹水養殖",
+        "position": [23.750475, 120.191213],
+        "link": "/topics/3",
+        "icon": {
+            "iconUrl": "/fish2.png",
+            "iconSize": [50, 50],
+            "iconAnchor": [25, 50],
+            "popupAnchor": [0, -50],
+            "shadowSize": [50, 50]
+        }
+    },
+    {
+        "id": 4,
+        "name": "魚塭",
+        "position": [23.729359, 120.175290],
+        "link": "/topics/4",
+        "icon": {
+            "iconUrl": "/fish2.png",
+            "iconSize": [50, 50],
+            "iconAnchor": [25, 50],
+            "popupAnchor": [0, -50],
+            "shadowSize": [50, 50]
+        }
+    }
+]

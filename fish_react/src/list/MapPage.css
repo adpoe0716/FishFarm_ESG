@@ -1,0 +1,25 @@
+.map-container {
+    position: relative;
+}
+
+.layer-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+    flex-direction: column; /* 按鈕垂直排列 */
+}
+
+.layer-buttons button {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.layer-buttons button:hover {
+    background-color: #f0f0f0;
+}
