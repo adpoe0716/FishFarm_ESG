@@ -4,7 +4,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from '../User';
-import '../Style.css';
+import './Login.css';
 import MapPage from './MapPage';
 
 

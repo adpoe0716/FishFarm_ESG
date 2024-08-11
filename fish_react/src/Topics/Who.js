@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from "recharts";
-import "./who.css"; 
+
 
 export default function Who({ num }) {
     const [fishfarmData, setFishfarmData] = useState([]);

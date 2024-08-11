@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Menu } from 'antd';
+import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { useAuth } from './User';
-import './Style.css';
-
-function Navbar() {
+import './Navbar.css'
+const Navbar = () => {
+    const [current, setCurrent] = useState('mail');
     const { user, logout, isAuthenticating } = useAuth();
 
     if (isAuthenticating) {
@@ -12,29 +14,52 @@ function Navbar() {
 
     const currentUser = user ? user.user_name : '';
     const user_fishfarm_num = user ? user.user_fishfarm_num : '';
-    // console.log(user_fishfarm_num);
+
+    const onClick = (e) => {
+        setCurrent(e.key);
+    };
+
+    const items = [
+        !user && {
+            label: <Link to="/">登入</Link>,
+            key: 'login',
+            icon: <MailOutlined />,
+            iconSize:'90px',
+        },
+        user && {
+            label: <Link to="/map">地圖</Link>,
+            key: 'map',
+            icon: <AppstoreOutlined />,
+        },
+        user && {
+            key: 'userMenu',
+            icon: <SettingOutlined />,
+            label: `目前使用者: ${currentUser}`,
+            children: [
+                {
+                    type: 'group',
+                    label: '選項',
+                    children: [
+                        {
+                            label: <Link to="/logout" onClick={logout}>登出</Link>,
+                            key: 'logout',
+                        },
+                    ],
+                },
+            ],
+        },
+    ].filter(Boolean); // 过滤掉不需要的项
+
     return (
-        <div className="navbar">
-            <h1 className="navbar-title">ESG養殖漁業系統</h1>
-            <div className="navbar-links">
-                {!user ? (
-                    <Link to="/" className="navbar-link">登入</Link>
-                ) : (
-                    <>
-                        <Link to="/map" className="navbar-link">地圖</Link>
-                        {/* <Link to="/buy" className="navbar-link">購買平台</Link> */}
-                        {/* <Link to="/new" className="navbar-link">新知</Link> */}
-                        {/* <Link to="/cal" className="navbar-link">計算機</Link> */}
-                        {/* <Link to="/test" className="navbar-link">test</Link> */}
-                        {/* <Link to="/measurement" className="navbar-link">測量</Link> */}
-                        
-                        <Link to="/logout" className="navbar-link" onClick={logout}>登出</Link>
-                        <span className="navbar-user">目前使用者: {currentUser}</span>
-                    </>
-                )}
-            </div>
-        </div>
+        <Menu
+            onClick={onClick}
+            selectedKeys={[current]}
+            mode="horizontal"
+            items={items}
+            
+            style={{ backgroundColor: '#8EE3EF', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.15)', padding: '10px 30px', fontSize: '20px' }} 
+        />
     );
-}
+};
 
 export default Navbar;
