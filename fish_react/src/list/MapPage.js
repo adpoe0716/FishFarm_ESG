@@ -6,6 +6,7 @@ import MapLayer1 from './Map.json';
 import MapLayer2 from './Map2.json';
 import MapLayer3 from './Map3.json';
 import MapLayer4 from './Map4.json';
+import MapLayer4 from './Map5.json';
 import InfoPanel from './InfoPanel';
 import './MapPage.css';
 
