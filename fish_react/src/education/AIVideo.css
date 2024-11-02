@@ -1,0 +1,133 @@
+.ai-video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(128, 128, 128, 0.8); /* 半透明的淡灰色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: row; /* 設置影片和聊天室左右排列 */
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .chat-container {
+    width: 40%; /* 設置聊天區域佔左右比例的40% */
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* 與影片區域分隔開 */
+    height: 100%; /* 設置整個聊天區域的高度 */
+    background-color: #b3e5fc;
+  }
+  
+  .message-list {
+    background-color: #b3e5fc;
+    flex-grow: 1; /* 讓訊息列表佔據可用的空間 */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* 使訊息垂直排列 */
+  }
+  
+  .message-bubble {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    max-width: 70%; /* 控制訊息氣泡的最大寬度 */
+  }
+  
+  .system-message {
+    background-color: #e0e0e0; /* 系統訊息使用淡灰色背景 */
+    align-self: flex-start; /* 系統訊息靠左 */
+    color: black;
+  }
+  
+  .user-message {
+    background-color: #4CAF50; /* 使用者訊息使用艷綠色背景 */
+    align-self: flex-end; /* 使用者訊息靠右 */
+    color: white;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+  }
+  
+  .input-field {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .send-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .loading-spinner {
+    font-size: 1.5rem;
+    color: #555;
+    text-align: center;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

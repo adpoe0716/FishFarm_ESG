@@ -10,10 +10,10 @@ import InfoPanel from './InfoPanel';
 import './MapPage.css';
 
 const layers = [
-    { name: 'Layer 1', data: MapLayer1 },
-    { name: 'Layer 2', data: MapLayer2 },
-    { name: 'Layer 3', data: MapLayer3, type: 'polygon' },
-    { name: 'Layer 4', data: MapLayer4, type: 'polygon' },
+    { name: '魚塭分布', data: MapLayer1 },
+    { name: '特殊養殖分布', data: MapLayer2 },
+    // { name: '', data: MapLayer3, type: 'polygon' },
+    // { name: 'Layer 4', data: MapLayer4, type: 'polygon' },
 ];
 
 function MapPage() {

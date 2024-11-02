@@ -1,0 +1,29 @@
+.suggestion-layout {
+  height: 100vh; /* 設置佈局高度為視窗高度 */
+}
+
+.suggestion-content {
+  padding: 20px;
+  background-color: #f0f4f8;
+  overflow-y: auto; /* 讓內容可以垂直滾動 */
+  height: calc(100vh - 64px); /* 假設 sidebar 或頂部導航佔據了 64px */
+}
+
+.suggestion-row {
+  padding: 16px;
+}
+
+.suggestion-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.suggestion-card h3 {
+  color: #1890ff;
+}
+
+.suggestion-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}

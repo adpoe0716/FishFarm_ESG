@@ -1,0 +1,22 @@
+/* 設定全局樣式 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* 防止捲動 */
+  }
+  
+  .background {
+    background-color: #cccccc; /* 灰色背景 */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box {
+    background-color: #ffffff; /* 白色背景 */
+    width: 90vw; /* 寬度縮減 5% */
+    height: 90vh; /* 高度縮減 5% */
+  }
+  

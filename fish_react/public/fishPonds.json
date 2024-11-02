@@ -1,0 +1,154 @@
+[
+    {
+      "id": 1,
+      "name": "魚塭-普通",
+      "position": [23.834148, 120.232551],
+      "link": "/topics/1",
+      "information": "1號魚塭正在進行日常的養殖操作，主要養殖淡水魚，設備運行正常。",
+      "fishpondPNG": "/img/fishpondPNG1.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      },
+      "needsWarning": true
+    },
+    {
+      "id": 2,
+      "name": "生態養殖-有機法",
+      "position": [23.772709, 120.236940],
+      "link": "/topics/2",
+      "information": "2號魚塭正進行有機養殖，使用天然飼料和水源，確保環境友好。",
+      "fishpondPNG": "/img/fishpondPNG2.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    },
+    {
+      "id": 3,
+      "name": "智慧魚塭-自動化控制",
+      "position": [23.834148, 120.232551],
+      "link": "/topics/3",
+      "information": "3號魚塭目前採用自動化控制系統，能夠遠程監控水質和餵食狀態。",
+      "fishpondPNG": "/img/fishpondPNG3.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    },
+    {
+      "id": 4,
+      "name": "高密度養殖-快速增長",
+      "position": [23.754231, 120.221123],
+      "link": "/topics/4",
+      "information": "4號魚塭目前處於休養期，暫停養殖作業，正在進行水質恢復和設施維護。",
+      "fishpondPNG": "/img/fishpondPNG4.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    },
+    {
+      "id": 5,
+      "name": "深層水養殖-自然法",
+      "position": [23.812334, 120.265433],
+      "link": "/topics/5",
+      "information": "5號魚塭利用深層水源模擬自然環境，養殖過程穩定，產量逐漸增加。",
+      "fishpondPNG": "/img/fishpondPNG5.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    },
+    {
+      "id": 6,
+      "name": "海水魚塭-鹽水養殖",
+      "position": [23.823456, 120.212123],
+      "link": "/topics/6",
+      "information": "6號魚塭專門用於鹽水魚類養殖，配備專業的鹽水處理設施。",
+      "fishpondPNG": "/img/fishpondPNG6.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    },
+    {
+      "id": 7,
+      "name": "溫泉養殖-高溫水域",
+      "position": [23.834890, 120.232344],
+      "link": "/topics/7",
+      "information": "7號魚塭位於溫泉區，利用當地高溫水源進行養殖，效果顯著。",
+      "fishpondPNG": "/img/fishpondPNG7.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    },
+    {
+      "id": 8,
+      "name": "養殖-綠色環保法",
+      "position": [23.871234, 120.202134],
+      "link": "/topics/8",
+      "information": "8號魚塭採用環保技術，確保養殖過程不使用化學物質，符合綠色標準。",
+      "fishpondPNG": "/img/fishpondPNG8.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    },
+    {
+      "id": 9,
+      "name": "混合魚種養殖",
+      "position": [23.823456, 120.232120],
+      "link": "/topics/9",
+      "information": "9號魚塭同時進行多種魚類混養，提升養殖效率並擴展市場需求。",
+      "fishpondPNG": "/img/fishpondPNG9.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    },
+    {
+      "id": 10,
+      "name": "深海養殖-高壓環境",
+      "position": [23.809876, 120.253411],
+      "link": "/topics/10",
+      "information": "10號魚塭模擬深海環境，專門針對高壓魚類的養殖，技術先進。",
+      "fishpondPNG": "/img/fishpondPNG10.jpg",
+      "icon": {
+        "iconUrl": "/fish2.png",
+        "iconSize": [50, 50],
+        "iconAnchor": [25, 50],
+        "popupAnchor": [0, -50],
+        "shadowSize": [50, 50]
+      }
+    }
+  ]
+  

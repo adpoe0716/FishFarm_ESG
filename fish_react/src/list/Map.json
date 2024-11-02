@@ -14,7 +14,7 @@
     },
     {
         "id": 2,
-        "name": "生態養殖-???法",
+        "name": "生態養殖-箱網養殖",
         "position": [23.772709, 120.236940],
         "link": "/topics/2",
         "icon": {
@@ -24,5 +24,74 @@
             "popupAnchor": [0, -50],
             "shadowSize": [50, 50]
         }
+    },
+    {
+        "id": 5,
+        "name": "魚塭-普通",
+        "position": [23.835157, 120.232990],
+        "link": "/topics/5",
+        "icon": {
+            "iconUrl": "/fish2.png",
+            "iconSize": [50, 50],
+            "iconAnchor": [25, 50],
+            "popupAnchor": [0, -50],
+            "shadowSize": [50, 50]
+        }
+    },
+    {
+        "id": 6,
+        "name": "魚塭-普通",
+        "position": [23.823782, 120.222600],
+        "link": "/topics/6",
+        "icon": {
+            "iconUrl": "/fish2.png",
+            "iconSize": [50, 50],
+            "iconAnchor": [25, 50],
+            "popupAnchor": [0, -50],
+            "shadowSize": [50, 50]
+        }
+    },
+    {
+        "id": 7,
+        "name": "魚塭-普通",
+        "position": [23.806933, 120.171441],
+        "link": "/topics/7",
+        "icon": {
+            "iconUrl": "/fish2.png",
+            "iconSize": [50, 50],
+            "iconAnchor": [25, 50],
+            "popupAnchor": [0, -50],
+            "shadowSize": [50, 50]
+        }
+    },
+    {
+        "id": 8,
+        "name": "魚塭-普通",
+        "position": [23.812117, 120.187969],
+        "link": "/topics/7",
+        "icon": {
+            "iconUrl": "/fish2.png",
+            "iconSize": [50, 50],
+            "iconAnchor": [25, 50],
+            "popupAnchor": [0, -50],
+            "shadowSize": [50, 50]
+        }
+    },
+    {
+        "id": 8,
+        "name": "魚塭-普通",
+        "position": [23.830694, 120.263371],
+        "link": "/topics/7",
+        "icon": {
+            "iconUrl": "/fish2.png",
+            "iconSize": [50, 50],
+            "iconAnchor": [25, 50],
+            "popupAnchor": [0, -50],
+            "shadowSize": [50, 50]
+        }
     }
 ]
+
+
+
+

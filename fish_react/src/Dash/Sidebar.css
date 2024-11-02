@@ -1,0 +1,62 @@
+.sider-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 使侧边栏的高度撑满整个页面 */
+    background-color: #F5F5F5; /* 背景颜色 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* 轻微的阴影效果 */
+    padding-top: 20px; /* 顶部内边距 */
+    padding-bottom: 20px; /* 底部内边距 */
+}
+.ant-layout-sider-collapsed {
+    background-color: #F5F5F5 !important;  /* 使用白色背景并强制应用 */
+}
+.sider-toggle-button {
+    margin-bottom: 16px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #b97ff4; /* 按钮背景颜色 */
+}
+
+.ant-menu-item {
+    font-size: 19px; /* 调整字体大小 */
+    font-weight: 550; /* 调整字体粗细 */
+    padding-left: 24px; /* 调整左侧内边距，使文字和图标保持对齐 */
+}
+
+.menu-icon {
+    font-size: 30px !important; /* 调整图标大小 */
+}
+
+.menu-label {
+    font-size: 19px; /* 调整文字字体大小 */
+    font-weight: 450; /* 调整文字字体粗细 */
+    color: #000000; /* 文字颜色 */
+}
+ 
+.ant-menu-item:hover {
+    background-color: #e6f7ff; /* 鼠标悬停时的背景颜色 */
+    border-radius: 8px; /* 增加圆角效果 */
+}
+
+.ant-menu-inline {
+    background-color: transparent; /* 使菜单背景透明，与侧边栏背景一致 */
+}
+
+.sider-content {
+    flex: 1;
+    overflow-y: auto; /* 当内容过多时允许滚动 */
+}
+
+.sider-footer {
+    margin-top: auto; /* 将按钮推到底部 */
+    padding: 20px;
+    text-align: right; /* 文本居中 */
+}
+.ant-layout-sider-trigger {
+    display: none;
+  }
+.ant-layout-sider {
+    transition: width 0.2s ease;
+  }
+    

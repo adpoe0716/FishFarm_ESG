@@ -1,0 +1,88 @@
+/* 主卡片容器，使用 Flexbox 進行橫向排列 */
+.weather-card {
+    display: flex; /* Flexbox 橫向排列 */
+    border-radius: 10px; /* 圓角 */
+    padding: 20px; /* 內邊距 */
+    gap: 20px; /* 子項之間的間距 */
+    align-items: center; /* 子項垂直居中 */
+    justify-content: space-around; /* 子項水平均勻分佈 */
+    width: 100%; /* 卡片寬度，調整為自適應 */
+    margin: 0 auto; /* 居中對齊 */
+    height: auto; /* 讓高度自動調整 */
+  }
+  
+  /* 每個天氣信息部分的容器 */
+  .weather-info-item {
+    flex: 1; /* 子項平分空間 */
+    text-align: center; /* 內容居中對齊 */
+  }
+  
+  /* 圖示容器 */
+  .weather-icon {
+    font-size: 36px; /* 確保所有圖示的大小一致 */
+    margin-bottom: 10px;
+    display: flex; /* 使用 Flexbox 進行對齊 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    width: 60px; /* 統一寬度 */
+    height: 60px; /* 統一高度 */
+    border-radius: 50%; /* 圓形背景 */
+  }
+  
+  /* 當前天氣 - 晴天圖示背景 */
+  .sunny-icon {
+    background-color: #FFD700; /* 金黃色背景 */
+    color: white;
+  }
+  
+  /* 天氣預報 - 陰天圖示背景 */
+  .cloudy-icon {
+    background-color: #B0C4DE; /* 淺藍色背景 */
+    color: white;
+  }
+  
+  /* 降雨機率 - 雨天圖示背景 */
+  .rain-icon {
+    background-color: #87CEEB; /* 淺藍色背景 */
+    color: white;
+  }
+  
+  /* 風向風速 - 風向圖示背景 */
+  .wind-icon {
+    background-color: #F5DEB3; /* 小麥色背景 */
+    color: white;
+  }
+  
+  /* 父容器，用來統一控制圖示和文字之間的間距 */
+  .weather-info-item {
+    padding-top: 10px; /* 統一控制上方的間距 */
+  }
+  
+  /* 標題樣式 */
+  .weather-title {
+    font-size: 16px;
+    color: #666666; /* 淺灰色文字 */
+    margin: 8px 0; /* 調整圖示和標題之間的間距 */
+  }
+  
+  /* 詳細內容樣式 */
+  .weather-detail {
+    font-size: 20px;
+    color: #333333; /* 深灰色文字 */
+    margin: 0; /* 確保文字與上方標題之間的距離一致 */
+  }
+  
+  /* 圖標浮動動畫效果 */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0); /* 圖標的起始和結束位置 */
+    }
+    50% {
+      transform: translateY(-10px); /* 圖標的浮動高度 */
+    }
+  }
+  
+  .weather-icon {
+    animation: float 3s ease-in-out infinite; /* 圖標浮動效果 */
+  }
+  

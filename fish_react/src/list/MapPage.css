@@ -1,6 +1,6 @@
 .map-container {
     position: relative;
-    height: calc(100vh - 48px); /* 減去導覽列的高度 */
+    height: calc(100vh - 80px); /* 減去導覽列的高度 */
     overflow: hidden; /* 禁止頁面滾動 */
 }
 

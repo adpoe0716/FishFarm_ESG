@@ -1,0 +1,31 @@
+.who-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
+    padding: 20px;
+  }
+  
+  .header-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* 增加上下行距 */
+  }
+  
+  .manager-info {
+    margin-left: 20px;
+  }
+  
+  .custom-divider {
+    margin: 20px 0; /* 增加 Divider 上下間距 */
+  }
+  
+  .details-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* 調整每個信息項的間距 */
+  }
+  
+  .details-box strong {
+    font-weight: bold;
+  }
+  

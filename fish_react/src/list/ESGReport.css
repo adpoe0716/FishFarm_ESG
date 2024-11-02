@@ -1,0 +1,41 @@
+.esg-report-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #f0f5fc, #fff);
+    color: #3c3c3c;
+  }
+  
+  .esg-text-container {
+    width: 50%;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  .author-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #e51c3f;
+  }
+  
+  .esg-image-container {
+    width: 45%;
+  }
+  
+  .esg-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  

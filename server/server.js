@@ -138,11 +138,25 @@ app.post("/api/search/sensor", async (req, res) => {
     const num = req.body.num;
     // console.log(req.body.num);
     let select = await sql.select(
-        "*, CONVERT_TZ(`sensor_date`, '+00:00', '+08:00') as `sensor_date`",
+        "*, CONVERT_TZ(`datetime`, '+00:00', '+08:00') as `datetime`",
         "`sensor`",
-        `WHERE \`fishfarm_num\` = ${num} ORDER BY \`sensor_id\` DESC LIMIT 5`
+        `WHERE \`fishfarm_id\` = 1 ORDER BY \`datetime\` DESC LIMIT 5`
     );
 
+
+    // console.log(select);
+    res.send(select);
+});
+
+app.post("/api/fishfarm_data", async (req, res) => {
+    const userid = req.body.userid;
+    const num = req.body.num;
+    console.log(num);
+    let select = await sql.select(
+        "*, CONVERT_TZ(`datetime`, '+00:00', '+08:00') as `datetime`",
+        "`fishfarm_data`",
+        `WHERE \`fishfarm_id\` = ${num} ORDER BY \`datetime\` DESC LIMIT 15`
+    );
     // console.log(select);
     res.send(select);
 });
@@ -179,6 +193,52 @@ app.post("/api/Cal/input", async (req, res) => {
 });
 
 
+app.post("/api/user_fishfarm", async (req, res) => {
+    const userId = req.body.user;
+    console.log("Received user ID:", userId);
+
+    if (userId != 0) {
+        // 當 user ID 不為 0 時，查詢該用戶的魚場資料
+        try {
+            const userFishfarms = await sql.select("*", "user_fishfarm", `WHERE user_id = ${userId}`);
+            const parsedUserFishfarms = JSON.parse(userFishfarms);
+            
+            // 取得所有 fishfarm_id
+            const fishfarmIds = parsedUserFishfarms.map(farm => farm.fishfarm_id);
+            console.log("Fishfarm IDs:", fishfarmIds);
+            
+            let detailedFishfarms = [];
+            
+            // 逐一查詢每個 fishfarm_id 的詳細資料
+            for (const fishfarmId of fishfarmIds) {
+                const fishfarmDetails = await sql.select("*", "fishfarm", `WHERE fishfarm_ID = ${fishfarmId}`);
+                detailedFishfarms.push(JSON.parse(fishfarmDetails));
+            }
+
+            res.send(detailedFishfarms); // 返回結果
+
+        } catch (error) {
+            console.error("Error fetching fish farm data:", error);
+            res.status(500).send({ message: "Server error" });
+        }
+    } else {
+        // 當 user ID 為 0 時，返回所有 fishfarm 資料
+        try {
+            const allFishfarms = await sql.select("*", "fishfarm", "");
+            const parsedAllFishfarms = JSON.parse(allFishfarms);
+            res.send(parsedAllFishfarms); // 返回所有魚場資料
+        } catch (error) {
+            console.error("Error fetching all fishfarms:", error);
+            res.status(500).send({ message: "Server error" });
+        }
+    }
+});
+
+
+
+
+
+
 
 app.post("/api/login", async (req, res) => {
     const userAccount = req.body.name;
@@ -190,17 +250,17 @@ app.post("/api/login", async (req, res) => {
         const result = await sql.select("*", "user", `WHERE \`user_email\` = '${userAccount}' AND \`user_password\` = '${userPassword}'`);
         console.log("Received result:", result);
 
-        // 確保 result 是一個有效的對象
         const user = Array.isArray(result) ? result[0] : JSON.parse(result)[0];
         console.log("Received User:", user);
 
         if (user) {
             const payload = {
+                user_id: user.user_id,
                 user_email: user.user_email,
                 user_name: user.user_name,
                 user_permissions: user.user_permissions,
-                user_fishfarm_num : user.fishfarm_num,
-                exp: Math.floor(Date.now() / 1000) + (60 * 60) // 1小時
+                user_fishfarm_num: user.fishfarm_num,
+                exp: Math.floor(Date.now() / 1000) + (60 * 60)
             };
             console.log(payload);
             const token = jwt.sign(payload, 'secret key');
@@ -215,7 +275,7 @@ app.post("/api/login", async (req, res) => {
 });
 
 const jwt = require('jsonwebtoken');
-const secretKey = 'secret key';  
+const secretKey = 'secret key';
 
 app.get('/api/validateToken', (req, res) => {
     const token = req.headers.authorization?.split(" ")[1];  // Bearer TOKEN_STRING

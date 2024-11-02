@@ -1,0 +1,22 @@
+/* 主卡片容器，使用 Flexbox 進行橫向排列 */
+.water-info-card {
+    display: flex; /* Flexbox 橫向排列 */
+    background-color: #f0f2f5; /* 淺灰色背景 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 輕微的陰影效果 */
+    padding: 20px; /* 內邊距 */
+    gap: 16px; /* 子項之間的間距 */
+    align-items: center; /* 子項垂直居中 */
+    justify-content: center; /* 子項水平居中 */
+    width: 100%; /* 卡片寬度 */
+    height: 200px;
+  }
+  
+  /* 子項容器 */
+  .water-info-item {
+    flex: 1; /* 子項平分空間 */
+    display: flex;
+    justify-content: center; /* 子項居中對齊 */
+    align-items: center;
+  }
+  

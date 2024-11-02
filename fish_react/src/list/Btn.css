@@ -1,0 +1,96 @@
+/* 懸浮按鈕樣式，設置為正圓形 */
+/* 懸浮按鈕樣式，確保正圓形 */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px !important;  
+    height: 80px;
+    background-color: #0077b6; /* 海洋藍 */
+    border: none;
+    border-radius: 50%; /* 設置按鈕為正圓形 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0; /* 確保內邊距不會影響形狀 */
+    z-index: 9999 !important;
+}
+
+.floating-btn img {
+    width: 65px;
+    height: 50px;
+}
+
+
+/* 懸浮視窗樣式 */
+.chat-modal {
+    max-width: 600px;
+    background-color: #f0f8ff; /* 淺藍色背景 */
+}
+
+.chat-window {
+    height: 300px;
+    overflow-y: auto;
+    background-color: #b3e5fc; /* 藍色背景，模擬海洋主題 */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* 保持訊息從上往下排列 */
+}
+
+/* 聊天訊息 */
+.chat-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    display: inline-block;
+}
+
+/* 系統訊息 (左邊) */
+.system-message {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #0077b6;
+    align-self: flex-start; /* 靠左對齊 */
+}
+
+/* 使用者訊息 (右邊) */
+.user-message {
+    background-color: #0077b6;
+    color: white;
+    align-self: flex-end; /* 靠右對齊 */
+}
+
+/* 聊天輸入框樣式 */
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input .ant-input {
+    flex: 1;
+}
+
+/* 調整 Modal 樣式 */
+.ant-modal {
+    border-radius: 10px;
+}
+
+.ant-modal-header {
+    background-color: #0077b6;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ant-modal-footer {
+    display: none;
+}
+
+.ant-modal-close {
+    color: white;
+}

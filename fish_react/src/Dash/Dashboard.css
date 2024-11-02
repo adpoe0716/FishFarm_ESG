@@ -1,0 +1,170 @@
+/* 全局樣式設置，確保頁面佈局正確 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.top-row,
+.bottom-row {
+  margin-bottom: 16px; /* 減少行間距 */
+}
+
+/* WeatherCard 卡片設計 */
+.card-weather {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  height: 30vh;
+}
+
+.card-weather:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CardWV 卡片設計 */
+.card-wv {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wv:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Temp 卡片設計 */
+.card-temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  height: 30vh;
+}
+
+.temp-warning-icon {
+  color: red;
+  font-size: 48px;
+  margin-left: 2px; /* 調整圖標與文字之間的距離 */
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* 輕微的跳動效果 */
+  }
+}
+
+.card-temp:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Video 卡片設計 */
+.card-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: calc(100% - 32px);
+  overflow: hidden;
+}
+
+.card-video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Who 和 Todo 卡片設計 */
+.card-who-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-who {
+  background-color: #ffffff;
+  padding: 2px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+  flex: 1;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.card-todo-wrapper {
+  padding-top: 20px; /* 增加與標題的間隔 */
+}
+
+.card-title {
+  margin-bottom: 10px; /* 調整標題和卡片之間的距離 */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-todo {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+  flex: 1;
+  margin-bottom: 16px;
+  overflow: hidden;
+  
+}
+
+.card-who-wrapper .card-todo:last-child {
+  margin-bottom: 0;
+}
+
+.card-who:hover,
+.card-todo:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.bottom-row {
+  height: 50vh;
+  overflow: hidden;
+}
+
+.card-title {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.card-weather,
+.card-wv,
+.card-temp {
+  position: relative;
+  padding-top: 40px;
+}

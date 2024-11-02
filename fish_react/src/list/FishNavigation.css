@@ -1,0 +1,69 @@
+/* 整個佈局的背景保持一致 */
+.layout {
+    background-color: #e0f7fa;
+    height: 100vh;
+}
+
+/* Header 的樣式調整 */
+.layout .ant-layout-header {
+    position: relative;
+    z-index: 100; /* 設定 z-index 為較大的值，確保它在卡片上方 */
+    background-color: #e0f7fa; /* 保持與內容一致的背景色 */
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 80px; /* 調整 padding 以便放置內容 */
+}
+
+/* Flexbox 用於排列標題和下拉選單 */
+.header-content {
+    display: flex;
+    align-items: center; /* 確保下拉選單與文字垂直居中對齊 */
+    justify-content: center; /* 水平居中整個 header 內容 */
+}
+
+/* 排序選單的樣式 */
+.sort-select {
+    margin-left: 20px; /* 增加與標題的距離 */
+}
+
+/* 調整內容區域，避免被Header擋住 */
+.content {
+    padding-top: 550px; /* 確保內容區域下移，避免與Header重疊 */
+    height: calc(100vh - 100px); /* 使內容區域佔滿屏幕高度 */
+    overflow-y: auto; /* 允許內容區域滾動 */
+    background-color: #e0f7fa; /* 保持背景色一致 */
+    padding-bottom: 50px; /* 增加一些底部空間，讓滾動體驗更好 */
+}
+
+/* 調整 Select 的 z-index */
+.custom-select {
+    z-index: 101; /* 比 Header 的 z-index 更高，確保可見 */
+    position: relative;
+}
+
+/* 下拉框展開時的 z-index 調整，確保在所有元素上方 */
+.ant-select-dropdown {
+    z-index: 9999 !important; /* 確保下拉選單展開時在所有元素上方 */
+}
+
+/* 卡片的樣式 */
+.ant-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-wrapper {
+    margin-top: 20px; /* 調整卡片的頂部間距，與選單保持適當距離 */
+}
+
+.ant-card-cover img {
+    object-fit: cover;
+    height: 200px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    h1 {
+      font-size: 20px;
+  }
+}
